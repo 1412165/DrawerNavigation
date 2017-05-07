@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.PlaceDirectionActivity"
+    android:weightSum="2">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        >
+
+    </fragment>
+
+    <RelativeLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_blue_500">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:id="@+id/iconDriving"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_driving_pressed"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/md_white_1000"
+            android:text="Current Location to Caesar Hotel"
+            android:layout_toRightOf="@id/btnBack"
+            android:layout_toLeftOf="@id/iconDriving"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/listViewDirection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nthieuitus.findplaces.Activity.PlaceDetailActivity"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/frameActionBar"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_green_500">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_social_share"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true" />
+
+        <ImageView
+            android:id="@+id/btnFavorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_fav_normal_stroke"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/btnShare" />
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/btnFavorite"
+            android:textSize="16dp"
+            android:textColor="@color/md_white_1000"
+            android:padding="5dp"
+            android:background="@color/md_green_400"
+            android:layout_marginRight="5dp"
+            android:layout_centerInParent="true"
+            android:text="0.25km"/>
+
+        <TextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/md_white_1000"
+            android:text="ATM Techcombank - Techcombank Quận 5"
+            android:layout_toRightOf="@id/btnBack"
+            android:layout_toLeftOf="@id/txtDistance"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/framePlaceAddress"
+        android:layout_below="@id/frameActionBar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/imageViewMarker"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_detail_marker"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"/>
+
+        <ImageView
+            android:id="@+id/btnCycling"
+            android:layout_width="@dimen/ic_driving_width"
+            android:layout_height="@dimen/ic_driving_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_cycling_normal"/>
+
+        <ImageView
+            android:id="@+id/btnWalking"
+            android:layout_width="@dimen/ic_driving_width"
+            android:layout_height="@dimen/ic_driving_width"
+            android:layout_toStartOf="@id/btnCycling"
+            android:layout_marginEnd="@dimen/ic_driving_margin_left"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_walking_normal"/>
+
+        <ImageView
+            android:id="@+id/btnDriving"
+            android:layout_width="@dimen/ic_driving_width"
+            android:layout_height="@dimen/ic_driving_width"
+            android:layout_toStartOf="@id/btnWalking"
+            android:layout_marginEnd="@dimen/ic_driving_margin_left"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_driving_normal"/>
+
+        <TextView
+            android:id="@+id/txtPlaceAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="284A, An Dương Vương, Phường 4, Quận 5, Hồ Chí Minh"
+            android:layout_toEndOf="@id/imageViewMarker"
+            android:layout_toStartOf="@id/btnDriving"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_centerInParent="true"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frameWebsite"
+        android:layout_below="@id/framePlaceAddress"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+        <ImageView
+            android:id="@+id/imageViewWebsite"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_detail_website"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:id="@+id/txtWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://www.techcombank.com.vn/"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/imageViewWebsite"
+            android:textSize="14dp"
+            android:textColor="@color/md_green_600"
+            android:textColorLink="@color/md_green_200"
+            android:linksClickable="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frameContact"
+        android:layout_below="@id/frameWebsite"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+        <ImageView
+            android:id="@+id/imageViewContact"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_detail_contact"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/txtContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1900 8198"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/imageViewContact"
+            android:textSize="14dp"
+            android:textColor="@color/md_green_600"
+            android:textColorLink="@color/md_green_200"
+            android:linksClickable="true" />
+
+        <TextView
+            android:id="@+id/txtInternationalContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+84 01900 8198"
+            android:layout_marginLeft="50dp"
+            android:layout_toEndOf="@id/txtContact"
+            android:textSize="14dp"
+            android:textColor="@color/md_blue_600"
+            android:textColorLink="@color/md_green_200"
+            android:linksClickable="true" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/frameImageGallery"
+        android:layout_below="@id/frameContact"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/llImageGallery"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBarLoading"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Large"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/frameReview"
+        android:layout_below="@id/frameImageGallery"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/listViewReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

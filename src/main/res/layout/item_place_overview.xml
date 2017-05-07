@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_defined"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:id="@+id/txtDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.25km"
+        android:layout_alignParentRight="true"
+        android:textSize="14dp"
+        android:textColor="@color/md_grey_400"
+        />
+
+    <TextView
+        android:id="@+id/txtPlaceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivIcon"
+        android:layout_toLeftOf="@id/txtDistance"
+        android:text="The Dessert Bar"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="16dp"/>
+
+    <TextView
+        android:id="@+id/txtPlaceAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11-13, Đường Bình Phú, P10, Q6. Thành phố Hồ Chí Minh, Việt Nam"
+        android:layout_below="@+id/txtPlaceName"
+        android:textColor="@color/md_grey_400"
+        android:layout_alignStart="@+id/txtPlaceName" />
+
+</RelativeLayout>

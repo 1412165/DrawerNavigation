@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:background="@color/md_white_1000">
+
+    <RelativeLayout
+        android:id="@+id/layoutTitleBar"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_green_400">
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/md_green_300"
+            android:textColor="@color/md_white_1000"
+            android:text="0.25km"/>
+
+        <TextView
+            android:id="@+id/txtPlaceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:text="The Daun Restaurant The Daun Restaurant The Daun Restaurant"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/txtDistance"
+            android:textColor="@color/md_white_1000"
+
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txtPlaceAddress"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="@color/md_black_1000"
+        android:layout_below="@id/layoutTitleBar"
+        android:text="194 Le Thanh Ton Street, District 1, Ben Thanh Ward 194 Le Thanh Ton Street, District 1, Ben Thanh Ward"
+        />
+
+    <TextView
+        android:id="@+id/txtRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Rating: 5.0"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/txtPlaceAddress" />
+
+</RelativeLayout>
